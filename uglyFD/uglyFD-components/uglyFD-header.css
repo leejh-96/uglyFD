@@ -55,6 +55,7 @@ header li{
     height: 100%;
     display: flex;
     justify-content: right;
+    /* align-items: center; */
 }
 .divwrap-sub5 button:not(.sub5-btn){
     border-radius: 5px;
