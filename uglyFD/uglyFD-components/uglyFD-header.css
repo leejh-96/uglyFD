@@ -63,7 +63,7 @@ header li{
     border: none;
     text-align: center;
     background-color: aliceblue;    
-    color: green;
+    color: rgb(0, 128, 0);
     font-weight: bolder;
 }
 .sub5-btn{

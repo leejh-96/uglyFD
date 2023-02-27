@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입출고관리내역</title>
+    <link rel="stylesheet" href="uglyFD-components/uglyFD-admin.css">
+    <script src="https://kit.fontawesome.com/ecdfb9b41a.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- uglyFD-header -->
+    <header>
+        <div id="header-divwrap">
+            <div class="divwrap-sub"><a class="a-inline-block1" href="uglyFD-motive.html"><img src="이미지/ugly-logo.png" alt="uglyFD-logo"></a></div>
+            <div class="divwrap-sub"></div>
+            <div class="divwrap-sub"><a class="a-inline-block1 uglyFD-title" href="uglyFD-main.html">uglyFD</a></div>
+            <div class="divwrap-sub"></div>
+            <div class="divwrap-sub">
+
+                <!-- 비로그인 시 처리 -->
+                <!-- <div class="divwrap-sub5">
+                    <a href="#"><button class="btn-primary btn-sm">로그인</button></a>
+                    <a href="#"><button class="btn-primary btn-sm">회원가입</button></a>
+                </div> -->
+
+                <!-- 로그인 시-회원 처리-->
+                <!-- <div class="divwrap-sub5">
+                    <button class="sub5-btn"><a href="#"><i class="fa-solid fa-user fa-lg"></i></a></button>
+                    <button class="sub5-btn"><a href="#"><i class="fa-sharp fa-solid fa-cart-shopping fa-lg"></i></a></button>
+                    <span class="badge-absolute badge">0</span>
+                    <form>
+                        <button class="btn-primary btn-sm">로그아웃</button>
+                    </form>
+                </div> -->
+
+                <!-- 로그인 시-관리자 처리 -->
+                <div class="divwrap-sub5">
+                    <button class="sub5-btn"><a href="#"><i class="fa-solid fa-user-secret fa-lg">-MANAGER-</i></a></button>
+                    <form>
+                        <button class="btn-primary btn-sm">로그아웃</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <nav id="header-navwrap">
+            <ul id="navwrap-ul">
+                <li>
+                    <a href="#">상품</a>
+                    <ul>
+                        <li><a href="#">채소</a></li>
+                        <li><a href="#">과일</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">1 : 1 문의</a></li>
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="admin-wrap">
+        <div id="wrap-div1">
+            <div><a href="#" class="admin-sidenav">회원관리</a></div>
+            <div><a href="#" class="admin-sidenav">상품등록</a></div>
+            <div><a href="#" class="admin-sidenav">재고관리</a></div>
+            <div><a href="#" class="admin-sidenav">입/출고조회</a></div>
+        </div>
+
+        <div id="wrap-div2">
+            <div class="recycle-div1"></div>
+            <h1>입/출고조회</h1>
+            <div class="recycle-div1"></div>
+            <!-- 입출고관리-조회를 위한 form -->
+            <form action="">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="row" colspan="4">입/출고정보입력</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" colspan="2">구분</th>
+                            <td>
+                                <label for="all"><input type="checkbox" id="all"checked>전체조회</label>
+                                <label for="in"><input type="checkbox" id="in">입고조회</label>
+                                <label for="out"><input type="checkbox" id="out">출고조회</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" colspan="2">상품종류</th>
+                            <td>
+                                <label for="fruit"><input type="checkbox" id="fruit" checked>과일</label>
+                                <label for="vegetable"><input type="checkbox" id="vegetable">채소</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" colspan="2">상품명</th>
+                            <td><input type="text" placeholder="상품명을 입력해주세요." size="60px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="find-btn">
+                    <button type="button" class="btn find-btn1">조회하기</button>
+                    <button type="reset" class="btn find-btn1">취소</button>
+                </div>
+                <div class="recycle-div1"></div>
+            </form>
+            <!-- 입출고관리-조회를 위한 form 끝-->
+            <!-- 입출고관리-출력하는 table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>상품종류</th>
+                        <th>상품명</th>
+                        <th>전체/입/출고</th>
+                        <th>수량</th>
+                        <th>날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td><a href="#">채소</a></td>
+                        <td>상추</td>
+                        <td>입고</td>
+                        <td>200</td>
+                        <td>2023-02-17</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 입출고관리-출력하는 table 끝-->
+            <div id="pagebar">
+                <button class="btn inoutbtn"><<</button>
+                <button class="btn inoutbtn"><</button>
+            
+                <button class="btn inoutbtn">1</button>
+                <button class="btn inoutbtn">2</button>
+
+                <button class="btn inoutbtn">></button>
+                <button class="btn inoutbtn">>></button>
+
+            </div>
+        </div>
+        <div id="wrap-div3"></div>
+    </div>
+
+
+
+
+    <!-- uglyFD-footer -->
+    <footer>
+        <hr>
+        <div id="footer-div1">
+            <div>
+                <img src="이미지/ugly-logo.png" alt="uglyFD-logo">
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>월-목요일 </td>
+                        <td>11:00 ~ 18:00(점심시간 12:00 ~ 13:00)</td>
+                    </tr>
+                    <tr>
+                        <td>금요일 </td>
+                        <td>09:00 ~ 18:00(점심시간 12:00 ~ 13:00)</td>
+                    </tr>
+                    <tr>
+                        <td>토·일·공휴일 </td>
+                        <td>휴무</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="footer-div2">
+            <p>상호명: 주식회사 어글리 푸드 대표 : 어글리 푸드  사업자등록번호 : 572-81-02284 소재지 : 강남지원 1관 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩 2F,3F,4F,5F,6F</p>
+            <p>서비스 이용약관   개인정보 처리방침  Copyright  2023 주식회사 어글리 푸드 All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
